@@ -45,14 +45,22 @@ app.use(router);
 
 
 // ========================================================= CONSUMER ======================================= //
+// uncomment bellow to activating consume position //
 
 // RABBIT
-// RabbitRpcServer.rpcServerRabbit();
-RabbitPublisherConfirmsClient.consumeRabbitPublisherConfirms();
+// RabbitConsume.hello_world();
+// RabbitConsume.work_queues();
+// RabbitConsume.publish_subscribe();
+// RabbitConsume.routingRabbit();
+// RabbitConsume.topicRabbit();
 
+// RPC
+// RabbitConsume.rpcServerRabbit();
+
+// PUBLISHER CONFIRMS
+// RabbitPublisherConfirmsClient.consumeRabbitPublisherConfirms();
 
 // RASCAL
-// RascalProduce.rascal_produce();
 // RascalConsume.rascal_consume();
 
 // RascalConsume.consume();
