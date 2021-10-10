@@ -21,10 +21,8 @@ router.post('/send_hello_durable', upload.array('image', 5), execWorker);
 router.post('/send_routing', upload.array('image', 5), routingRabbit);
 router.post('/send_topic', upload.array('image', 5), topicRabbit);
 router.post('/send_rpc', upload.array('image', 5), rpcClientRabbit);
-router.post('/send_publisher', upload.array('image', 5), startRabbitPublisherConfirms);
-
-// Publisher confirms < unstable >
-router.post('/publish_subscribe', upload.array('image', 5), publishSubscribe);
+router.post('/send_publisher_confirms', upload.array('image', 5), startRabbitPublisherConfirms);
+router.post('/send_publish_subscribe', upload.array('image', 5), publishSubscribe);
 
 // Delete queue
 router.delete('/delete_queue', deleteRabbitQueue);
