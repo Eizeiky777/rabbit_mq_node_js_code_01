@@ -15,7 +15,7 @@ const Broker = require('rascal').BrokerAsPromised;
 
 const RabbitConsume = require('./controllers/rabbit/rabbit-consume');
 const RabbitRpcServer = require('./controllers/rabbit/rabbit-rpc-server');
-const RabbitScheduler = require('./controllers/rabbit/rabbit-scheduler');
+const RabbitSchedulerClient = require('./controllers/rabbit/rabbit-scheduler-client');
 const RabbitPublisherConfirmsClient = require('./controllers/rabbit/rabbit-publisher-confirms-client');
 
 const RascalProduce = require('./controllers/rascal/rascal-produce');
@@ -62,7 +62,7 @@ app.use(router);
 // RabbitPublisherConfirmsClient.consumeRabbitPublisherConfirms();
 
 // SCHEDULER
-// RabbitScheduler.consumeRabbitDelay();
+// RabbitSchedulerClient.consumeRabbitDelay();
 
 // RASCAL
 // RascalConsume.rascal_consume();
