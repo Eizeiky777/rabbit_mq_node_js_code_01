@@ -8,6 +8,7 @@ const { publishSubscribe } = require('../controllers/rabbit/rabbit-publish-subsc
 const { startRabbitPublisherConfirms } = require('../controllers/rabbit/rabbit-publisher-confirms-server');
 const { routingRabbit } = require('../controllers/rabbit/rabbit-routing');
 const { rpcClientRabbit } = require('../controllers/rabbit/rabbit-rpc-client');
+const { startRabbitDelay } = require('../controllers/rabbit/rabbit-scheduler');
 const { topicRabbit } = require('../controllers/rabbit/rabbit-topics');
 const { execWorker } = require('../controllers/rabbit/rabbit-work-queues');
 const { rascal_produce, produce } = require('../controllers/rascal/rascal-produce');
@@ -23,6 +24,9 @@ router.post('/send_topic', upload.array('image', 5), topicRabbit);
 router.post('/send_rpc', upload.array('image', 5), rpcClientRabbit);
 router.post('/send_publisher_confirms', upload.array('image', 5), startRabbitPublisherConfirms);
 router.post('/send_publish_subscribe', upload.array('image', 5), publishSubscribe);
+
+// RABBIT_MQ SCHEDULER < stable >
+router.post('/send_scheduler', upload.array('image', 5), startRabbitDelay);
 
 // Delete queue
 router.delete('/delete_queue', deleteRabbitQueue);

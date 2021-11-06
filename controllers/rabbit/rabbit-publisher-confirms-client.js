@@ -69,7 +69,7 @@ function startConsume(conn) {
             // nack and don't requeue
             ch.nack(msg, false, false);
             console.log('TERMINATE : queue has been purged');
-          } else if (!ok) {
+          } else if (ok) {
             ch.ack(msg);
             qAttemps = 1;
           } else {
