@@ -2,3 +2,5 @@
 
 Sample code dari tutorial rabbitmq yang telah saya sederhanakan dalam codingan yang mudah dimengerti
 https://www.rabbitmq.com/tutorials/tutorial-seven-java.html
+
+Include code tutorial rabbit-mq scheduler
