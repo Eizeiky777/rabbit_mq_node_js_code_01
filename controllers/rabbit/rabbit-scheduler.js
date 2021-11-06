@@ -117,14 +117,10 @@ function startPublisher() {
     //   publish(m[0], m[1], m[2]);
     // }
 
-    let limit = 5;
-    const intrv = setInterval(() => {
-      console.log('interval ', limit);
-      publish('jobs', Buffer.from(`work sent: ${current_time()}`), 2000);
-
-      limit -= 1;
-      if (limit === 0) clearInterval(intrv);
-    }, 3000);
+    const limit = [1, 2, 3, 4, 5];
+    limit.forEach((e) => {
+      publish('jobs', Buffer.from(`work sent: ${current_time()}`), 2000 * e);
+    });
   });
 }
 
