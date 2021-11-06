@@ -62,7 +62,7 @@ app.use(router);
 // RabbitPublisherConfirmsClient.consumeRabbitPublisherConfirms();
 
 // SCHEDULER
-RabbitScheduler.consumeRabbitDelay();
+// RabbitScheduler.consumeRabbitDelay();
 
 // RASCAL
 // RascalConsume.rascal_consume();
